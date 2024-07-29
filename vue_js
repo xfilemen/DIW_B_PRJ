@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<script type="text/javascript" src="https://m.cjone.com/cjmmobile/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://m.cjone.com/cjmmobile/js/vue.js"></script>
+</head>
+<body>
+<input type="hidden" id="inputmode" name="inputmode" value="web"/>
+<div id="wrap">
+	<!--구매 적립몰 영역-->
+	<div id="container">
+		<div id="content">
+			<template id="vue_content">
+				<div id="link_price">
+                    hello world!
+				</div>
+			</template>
+		</div>		
+	</div>
+	<script>
+		var _evtVm;
+		var _data = {};
+			
+		$(document).ready(function() {			
+			setTimeout(function() {
+				dataBind();
+			}, 300);
+	
+		});
+	
+		function dataBind() {
+			Vue.config.devtools = true; 
+			_evtVm = new Vue({
+				el: "#content",
+				template: "#vue_content",
+				data: _data,
+				mounted: function() {
+				},
+				methods: {
+                },
+			});
+		}
+	</script>
+</body>
+</html>
